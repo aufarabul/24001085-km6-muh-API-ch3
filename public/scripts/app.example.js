@@ -8,8 +8,6 @@ class App {
   async init() {
     // Register click listener
     this.clearButton.onclick = this.clear;
-    // this.cariButton.addEventListener("click", this.run.bind(this));
-    // this.cariButton.onclick = this.run;
     this.cariButton.addEventListener("click", async (event) => {
       event.preventDefault();
       await this.load();
@@ -30,12 +28,6 @@ class App {
       node.innerHTML = car.render();
       this.carContainerElement.appendChild(node);
     });
-    // Car.list.forEach((car) => {
-    //   const node = document.createElement("div");
-    //   node.classList.add("col-md-4");
-    //   node.innerHTML = car.render();
-    //   this.carContainerElement.appendChild(node);
-    // });
   };
 
   async load() {

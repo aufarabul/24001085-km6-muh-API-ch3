@@ -70,32 +70,3 @@ class Car {
     `;
   }
 }
-//return `
-//   <p>id: <b>${this.id}</b></p>
-//   <p>plate: <b>${this.plate}</b></p>
-//   <p>manufacture: <b>${this.manufacture}</b></p>
-//   <p>model: <b>${this.model}</b></p>
-//   <p>available at: <b>${this.availableAt}</b></p>
-//   <img src="${this.image}" alt="${this.manufacture}" width="64px">
-// `;
-
-/**
-  <div class="card" style="width: 18rem">
-  <img src="${this.image}" class="card-img-top" alt="car-img" />
-  <div class="card-body">
-    <p class="card-text">
-      ${this.manufacture} ${this.model}
-    </p>
-    <p class="card-text fw-semibold">Rp ${this.rentPerDay} / Hari</p>
-    <p class="card-text">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, unde
-      accusantium. A recusandae fuga saepe et necessitatibus consectetur fugit!
-      Neque sapiente eum obcaecati ad reiciendis, non fuga eaque quod magnam?
-    </p>
-    <a href="#" class="btn btn-success">
-      Sewa
-    </a>
-  </div>
-</div>;
- 
- */
