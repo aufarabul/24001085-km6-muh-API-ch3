@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "51276745-8057-40b3-bb08-dd13106340b4",
+		"name": "FSW",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33084131",
+		"_collection_link": "https://universal-robot-164615.postman.co/workspace/FSW~58780652-4c74-4269-9aac-7b690c1341ae/collection/33084131-51276745-8057-40b3-bb08-dd13106340b4?action=share&source=collection_link&creator=33084131"
+	},
+	"item": [
+		{
+			"name": "Challenge3",
+			"item": [
+				{
+					"name": "Get Cars",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2000/cars?plate&manufacture&model&capacity&availableAt&transmission&available&type&year",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"cars"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "plate",
+									"value": null
+								},
+								{
+									"key": "manufacture",
+									"value": null
+								},
+								{
+									"key": "model",
+									"value": null
+								},
+								{
+									"key": "capacity",
+									"value": null
+								},
+								{
+									"key": "availableAt",
+									"value": null
+								},
+								{
+									"key": "transmission",
+									"value": null
+								},
+								{
+									"key": "available",
+									"value": null
+								},
+								{
+									"key": "type",
+									"value": null
+								},
+								{
+									"key": "year",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Cars by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2000/cars/9ff03bbc-b18c-4ba7-8f3a-4c4b5c2f6c77",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"cars",
+								"9ff03bbc-b18c-4ba7-8f3a-4c4b5c2f6c77"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Cars",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"id\": \"5\",\r\n    \"plate\": \"OSL-4224\",\r\n    \"manufacture\": \"Lincoln\",\r\n    \"model\": \"MKZ\",\r\n    \"image\": \"./images/car03.min.jpg\",\r\n    \"rentPerDay\": 900000,\r\n    \"capacity\": 6,\r\n    \"description\": \" Driver & front passenger map pockets. Direct-type tire pressure monitor system. Cargo area lamp. Glove box lamp.\",\r\n    \"availableAt\": \"2022-03-23T15:49:05.563Z\",\r\n    \"transmission\": \"Automanual\",\r\n    \"available\": true,\r\n    \"type\": \"Sedan\",\r\n    \"year\": 2021,\r\n    \"options\": [\r\n      \"Bucket Seats\",\r\n      \"Airbag: Passenger\",\r\n      \"Airbag: Driver\",\r\n      \"Power Seats\",\r\n      \"Airbag: Side\",\r\n      \"Antilock Brakes\",\r\n      \"CD (Multi Disc)\"\r\n    ],\r\n    \"specs\": [\r\n      \"Driver & front passenger map pockets\",\r\n      \"Direct-type tire pressure monitor system\",\r\n      \"Cargo area lamp\",\r\n      \"Glove box lamp\",\r\n      \"Silver finish interior door handles\",\r\n      \"Driver & front passenger advanced multistage airbags w/occupant sensors\",\r\n      \"Silver accent IP trim finisher -inc: silver shifter finisher\",\r\n      \"Fasten seat belt warning light/chime\"\r\n    ]\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2000/cars/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"cars",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Cars",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"plate\": \"BHD-3923\",\r\n            \"manufacture\": \"Lincoln\",\r\n            \"model\": \"Navigator\",\r\n            \"image\": \"./images/car05.min.jpg\",\r\n            \"rentPerDay\": 200000,\r\n            \"capacity\": 2,\r\n            \"description\": \" Body color sill extension. Torsion beam rear suspension w/stabilizer bar. Front & rear passenger folding assist grips.\",\r\n            \"availableAt\": \"2022-03-23T15:49:05.563Z\",\r\n            \"transmission\": \"Automatic\",\r\n            \"available\": false,\r\n            \"type\": \"Minivan\",\r\n            \"year\": 2020,\r\n            \"options\": [\r\n                \"CD (Multi Disc)\",\r\n                \"Cruise Control\",\r\n                \"Power Locks\",\r\n                \"Alloy Wheels\",\r\n                \"Tow Package\"\r\n            ],\r\n            \"specs\": [\r\n                \"Body color sill extension\",\r\n                \"Torsion beam rear suspension w/stabilizer bar\",\r\n                \"Front & rear passenger folding assist grips\",\r\n                \"Electronic control braking (ECB)\",\r\n                \"Black windshield molding\"\r\n            ]\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2000/cars/6e2bc663-5197-441a-957b-bc75e4a2da7c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"cars",
+								"6e2bc663-5197-441a-957b-bc75e4a2da7c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete car by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2000/cars/6e2bc663-5197-441a-957b-bc75e4a2da7c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"cars",
+								"6e2bc663-5197-441a-957b-bc75e4a2da7c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
